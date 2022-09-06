@@ -1,0 +1,104 @@
+.shape-border-radius {
+  background: linear-gradient(
+    45deg,
+    #fff,
+    var(--first-color),
+    var(--first-color-alt),
+    var(--first-color-lighter)
+  );
+  animation: morph 24s ease-in-out infinite, Gradient 24s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 100%;
+  max-height: 400px;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.shape-border-radius__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes colors {
+  0% {
+    background: linear-gradient(
+      45deg,
+      var(--first-color) 0%,
+      var(--first-color-alt) 100%
+    );
+  }
+
+  50% {
+    background: linear-gradient(
+      45deg,
+      var(--first-color-alt) 0%,
+      var(--first-color) 100%
+    );
+  }
+
+  100% {
+    background: linear-gradient(
+      45deg,
+      var(--first-color) 0%,
+      var(--first-color-alt) 100%
+    );
+  }
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+  }
+
+  10% {
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+  }
+
+  20% {
+    border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+  }
+
+  30% {
+    border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+  }
+
+  40% {
+    border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+  }
+
+  50% {
+    border-radius: 100%;
+  }
+
+  60% {
+    border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+  }
+
+  70% {
+    border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+  }
+
+  80% {
+    border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+  }
+
+  90% {
+    border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+  }
+}

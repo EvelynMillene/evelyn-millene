@@ -1,0 +1,200 @@
+@keyframes typing {
+  0.0000%,
+  21.6% {
+    content: "";
+  }
+  1.2%,
+  20.4% {
+    content: "E";
+  }
+  2.4%,
+  19.2% {
+    content: "Ev";
+  }
+  3.6%,
+  18% {
+    content: "Eve";
+  }
+  4.8%,
+  16.8% {
+    content: "Evel";
+  }
+  6%,
+  15.6% {
+    content: "Evelyn";
+  }
+  7.2%,
+  14.4% {
+    content: "Evelyn ";
+  }
+  8.4%,
+  13.2% {
+    content: "Evelyn M";
+  }
+  9.6%,
+  12% {
+    content: "Evelyn M.";
+  }
+
+  22%,
+  30.6% {
+    content: "";
+  }
+
+  23.2%,
+  29.4% {
+    content: "M";
+  }
+  24.4%,
+  28.2% {
+    content: "Mã";
+  }
+  25.6%,
+  28% {
+    content: "Mãe";
+  }
+
+  31%,
+  47.8605% {
+    content: "";
+  }
+
+  32.2%,
+  91% {
+    content: "F";
+  }
+  33.4%,
+  88% {
+    content: "Fr";
+  }
+  34.6%,
+  85% {
+    content: "Fro";
+  }
+  35.8%,
+  83% {
+    content: "Fron";
+  }
+
+  37%,
+  82% {
+    content: "Front";
+  }
+  38.2%,
+  80.8% {
+    content: "Front-";
+  }
+  39.4%,
+  79.4% {
+    content: "Front-e";
+  }
+  40.6%,
+  78.2% {
+    content: "Front-en";
+  }
+  41.8%,
+  77% {
+    content: "Front-end";
+  }
+  43%,
+  76% {
+    content: "Front-end ";
+  }
+  44.4%,
+  73% {
+    content: "Front-end d";
+  }
+
+  45.6%,
+  70% {
+    content: "Front-end de";
+  }
+  46.8%,
+  69% {
+    content: "Front-end dev";
+  }
+  47%,
+  66% {
+    content: "Front-end deve";
+  }
+  48.2%,
+  65.5% {
+    content: "Front-end devel";
+  }
+  49.4%,
+  64% {
+    content: "Front-end develo";
+  }
+  50.6%,
+  63% {
+    content: "Front-end develop";
+  }
+  51.8%,
+  62% {
+    content: "Front-end develope";
+  }
+  53%,
+  60% {
+    content: "Front-end developer";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%,
+    100% {
+      content: "Evelyn M.";
+    }
+    25% {
+      content: "developer";
+    }
+    50% {
+      content: "mother";
+    }
+    75% {
+      content: "human";
+    }
+  }
+
+  .typewriter::before {
+    content: "Evelyn M.";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
